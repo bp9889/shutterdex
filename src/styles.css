@@ -422,3 +422,10 @@ html[data-still="1"] .brand-track, html[data-still="1"] .chrome { animation-play
 .seg button { border: 0; background: transparent; color: var(--soft); transition: color .25s var(--spring); }
 .seg button:hover { border: 0; color: var(--text); }
 .seg button[aria-pressed="true"] { background: transparent; color: var(--text); border: 0; }
+
+/* brand cards: five in a row only when there's room; otherwise three and two, so long names like Panasonic fit */
+@media (max-width: 1180px) and (min-width: 861px) {
+  .doors.five { flex-wrap: wrap; }
+  .doors.five .door { flex: 1 1 calc(33.333% - 10px); min-height: 380px; }
+}
+.doors.five .door-label { overflow-wrap: anywhere; }
